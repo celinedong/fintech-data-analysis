@@ -6,7 +6,7 @@ from datetime import datetime
 # ==============================================================================
 # 1. ROBUST PATH CONFIGURATION
 # We use __file__ to locate the script's directory regardless of where it is 
-# executed from, preventing 'ModuleNotFoundError' [cite: 2026-02-04].
+# executed from, preventing 'ModuleNotFoundError'.
 # ==============================================================================
 
 # Absolute path to 'phase2_production_mlops'
@@ -23,7 +23,7 @@ os.makedirs(LOG_DIR, exist_ok=True)
 if SRC_PATH not in sys.path:
     sys.path.append(SRC_PATH)
 
-# Now we can safely import our modular components [cite: 2026-02-04]
+# Now we can safely import our modular components 
 try:
     from data_loader import load_config
     from inference import run_inference
@@ -42,9 +42,8 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        # 显式指定 utf-8 编码以支持 Emoji [cite: 2026-02-04]
         logging.FileHandler(LOG_FILE, encoding='utf-8'), 
-        logging.StreamHandler(sys.stdout) # 确保控制台输出
+        logging.StreamHandler(sys.stdout)
     ]
 )
 
@@ -59,7 +58,7 @@ def main():
     try:
         # STEP 1: MONITORING & DRIFT DETECTION
         # Checks if current data distribution (PSI) is still aligned with 
-        # the training baseline to protect model precision [cite: 2026-02-04].
+        # the training baseline to protect model precision.
         logging.info("Step 1: Running Data Drift Monitoring (PSI)...")
         run_monitoring_suite()
         
