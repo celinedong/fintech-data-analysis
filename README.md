@@ -74,13 +74,16 @@ python weekly_run.py
 ```
 
 ### 3. Audit & Verification
-Open notebooks/05_Production_Verification.ipynb to review the generated Risk Distribution and Potential ROI Report.
+
+Open `phase1_model_development/05_Production_Verification.ipynb` to review the generated Risk Distribution and Potential ROI Report.
+
+```text
 quant_project/
-├── data_storage/           # Raw data and training baselines
-├── model_storage/          # Serialized model artifacts (.joblib)
-├── phase2_production_mlops/
-│   ├── config/             # YAML configuration files
-│   ├── logs/               # Audit logs and weekly decision reports (CSV)
-│   ├── src/                # Modular Python source code
-│   └── weekly_run.py       # Master entry point
-└── phase1_model_development/  # R&D and Audit records
+├── data_storage/              # Raw data and training baselines
+├── model_storage/             # Serialized model artifacts (.joblib)
+├── phase1_model_development/  # R&D and Audit records
+└── phase2_production_mlops/   # Production-ready MLOps pipeline
+    ├── config/                # YAML configuration files
+    ├── logs/                  # Audit logs and weekly decision reports (CSV)
+    ├── src/                   # Modular Python source code
+    └── weekly_run.py          # Master entry point
