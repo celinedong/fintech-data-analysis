@@ -9,9 +9,9 @@
 business_logic:
   # The probability cutoff where Net Interest Margin is maximized
   decision_threshold: 0.29 
-  # Estimated loss per loan default (Principal) [cite: 2026-02-04]
+  # Estimated loss per loan default (Principal)
   default_cost: 20000 
-  # Estimated lost profit per rejected good customer (Interest) [cite: 2026-02-04]
+  # Estimated lost profit per rejected good customer (Interest)
   opportunity_cost: 5000 
 
 # 2. SYSTEM PATHS (Absolute Paths for Windows)
@@ -28,7 +28,7 @@ paths:
 # Thresholds for detecting data degradation over time.
 monitoring:
   # Population Stability Index (PSI) limit. 
-  # Values > 0.2 indicate significant distribution shift [cite: 2026-02-04]
+  # Values > 0.2 indicate significant distribution shift
   psi_alert_limit: 0.2 
-  # The window of time (in days) used for rolling performance metrics [cite: 2026-02-04]
+  # The window of time (in days) used for rolling performance metrics
   rolling_window_days: 7
